@@ -1,0 +1,74 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/hangman.css">
+    <title>Jogo</title>
+</head>
+
+<body>
+
+<img src="{% static 'images/hangman-start.gif' %}">
+
+<h5>Acertos: 0</h5>
+<h5>Erros: 0</h5>
+
+<form action="" id="letters" method="POST">
+
+    <div>
+        <input type="hidden" name="game_id" value="{{ game.game_id }}"/>
+        <button class="btn btn-default" type="submit" name="letter" value="a">a</button>
+        <button class="btn btn-default" type="submit" name="letter" value="b">b</button>
+        <button class="btn btn-default" type="submit" name="letter" value="c">c</button>
+        <button class="btn btn-default" type="submit" name="letter" value="d">d</button>
+        <button class="btn btn-default" type="submit" name="letter" value="e">e</button>
+        <button class="btn btn-default" type="submit" name="letter" value="f">f</button>
+        <button class="btn btn-default" type="submit" name="letter" value="g">g</button>
+        <button class="btn btn-default" type="submit" name="letter" value="h">h</button>
+        <button class="btn btn-default" type="submit" name="letter" value="i">i</button>
+        <button class="btn btn-default" type="submit" name="letter" value="j">j</button>
+        <button class="btn btn-default" type="submit" name="letter" value="k">k</button>
+        <button class="btn btn-default" type="submit" name="letter" value="l">l</button>
+        <button class="btn btn-default" type="submit" name="letter" value="m">m</button>
+    </div>
+    <br>
+
+    <div>
+        <button class="btn btn-default" type="submit" name="letter" value="n">n</button>
+        <button class="btn btn-default" type="submit" name="letter" value="o">o</button>
+        <button class="btn btn-default" type="submit" name="letter" value="p">p</button>
+        <button class="btn btn-default" type="submit" name="letter" value="q">q</button>
+        <button class="btn btn-default" type="submit" name="letter" value="r">r</button>
+        <button class="btn btn-default" type="submit" name="letter" value="s">s</button>
+        <button class="btn btn-default" type="submit" name="letter" value="t">t</button>
+        <button class="btn btn-default" type="submit" name="letter" value="u">u</button>
+        <button class="btn btn-default" type="submit" name="letter" value="v">v</button>
+        <button class="btn btn-default" type="submit" name="letter" value="w">w</button>
+        <button class="btn btn-default" type="submit" name="letter" value="x">x</button>
+        <button class="btn btn-default" type="submit" name="letter" value="y">y</button>
+        <button class="btn btn-default" type="submit" name="letter" value="z">z</button>
+    </div>
+    <br>
+
+
+        <div>
+        <button class="btn btn-default" type="submit" name="letter" value="á">á</button>
+        <button class="btn btn-default" type="submit" name="letter" value="é">é</button>
+        <button class="btn btn-default" type="submit" name="letter" value="í">í</button>
+        <button class="btn btn-default" type="submit" name="letter" value="ó">ó</button>
+        <button class="btn btn-default" type="submit" name="letter" value="ú">ú</button>
+        <button class="btn btn-default" type="submit" name="letter" value="ã">ã</button>
+        <button class="btn btn-default" type="submit" name="letter" value="õ">õ</button>
+        <button class="btn btn-default" type="submit" name="letter" value="ç">ç</button>
+        <button class="btn btn-default" type="submit" name="letter" value="â">â</button>
+        <button class="btn btn-default" type="submit" name="letter" value="ê">ê</button>
+        <button class="btn btn-default" type="submit" name="letter" value="ô">ô</button>
+    </div>
+    {% csrf_token %}
+
+</form>
+<br>
+</body>
